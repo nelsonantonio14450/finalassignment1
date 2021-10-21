@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace TodoAppWithJWT.Models
+namespace PaymentWithJWT.Models
 {
     public class RefreshToken
     {

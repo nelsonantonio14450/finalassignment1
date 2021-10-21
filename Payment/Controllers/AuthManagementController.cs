@@ -9,18 +9,18 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using TodoAppWithJWT.Configuration;
-using TodoAppWithJWT.Models.DTO.Request;
-using TodoAppWithJWT.Models.DTO.Responses;
-using TodoApp.Data;
-using TodoApp.Models;
+using PaymentWithJWT.Configuration;
+using PaymentWithJWT.Models.DTO.Request;
+using PaymentWithJWT.Models.DTO.Responses;
+using Payment.Data;
+using Payment.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using TodoAppWithJWT.Models;
+using PaymentWithJWT.Models;
 using System.Runtime;
 using Microsoft.EntityFrameworkCore;
 
-namespace TodoAppWithJWT.Controllers
+namespace PaymentAppWithJWT.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

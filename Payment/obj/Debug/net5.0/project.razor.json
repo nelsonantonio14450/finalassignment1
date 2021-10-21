@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\ASUS\\Downloads\\dockerfinalgithub\\jwt - Postgres\\TodoApp\\TodoApp.csproj",
+  "FilePath": "c:\\Users\\ASUS\\Downloads\\belajar c#\\Final Assignment1\\Postgres Payment\\payment\\payment.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,7 +15616,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "TodoApp",
+  "RootNamespace": "payment",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

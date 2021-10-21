@@ -12,16 +12,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using TodoApp.Data;
-using TodoAppWithJWT.Configuration;
+using Payment.Data;
+using PaymentWithJWT.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 
-
-
-namespace TodoApp
+namespace payment
 {
     public class Startup
     {
@@ -35,6 +33,7 @@ namespace TodoApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
             services.AddControllers();
             services.AddDbContext<ApiDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
@@ -45,7 +44,7 @@ namespace TodoApp
                         .SwaggerDoc("v1",
                         new OpenApiInfo
                         {
-                            Title = "TodoApp",
+                            Title = "Payments",
                             Version = "v1",
                             Description =
                                 "Authentication and Authorization in ASP.NET 5 with JWT and Swagger"
@@ -110,8 +109,6 @@ namespace TodoApp
             services.AddDefaultIdentity<IdentityUser>(Options => Options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApiDBContext>();
         }
 
-
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -119,7 +116,7 @@ namespace TodoApp
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApp v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Payments v1"));
             }
 
             app.UseHttpsRedirection();

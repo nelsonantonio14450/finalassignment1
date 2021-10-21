@@ -1,4 +1,4 @@
-namespace TodoAppWithJWT.Configuration
+namespace PaymentWithJWT.Configuration
 {
     public class JwtConfig
     {

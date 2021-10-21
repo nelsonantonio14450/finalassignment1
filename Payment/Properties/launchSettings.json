@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:33370",
+      "applicationUrl": "http://localhost:14683",
       "sslPort": 44388
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TodoApp": {
+    "payment": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

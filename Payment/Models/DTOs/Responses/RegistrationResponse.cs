@@ -1,7 +1,7 @@
-using TodoAppWithJWT.Configuration;
+using PaymentWithJWT.Configuration;
 
 
-namespace TodoAppWithJWT.Models.DTO.Responses
+namespace PaymentWithJWT.Models.DTO.Responses
 {
     public class RegistrationResponse : AuthResult { }
 }

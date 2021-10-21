@@ -1,24 +1,24 @@
 using Microsoft.EntityFrameworkCore;
-using TodoApp.Models;
+using Payment.Models;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using TodoAppWithJWT.Configuration;
+using PaymentWithJWT.Configuration;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using TodoAppWithJWT.Models;
+using PaymentWithJWT.Models;
 
-namespace TodoApp.Data
+namespace Payment.Data
 {
     public class ApiDBContext : IdentityDbContext
     {
-        public virtual DbSet<ItemData> Items { get; set; }
+        public virtual DbSet<PaymentDetails> Items { get; set; }
         public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
         public ApiDBContext(DbContextOptions<ApiDBContext> options) : base(options)
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder builder)//ini buat postgres
         {
             base.OnModelCreating(builder);
             builder.Entity<IdentityUser>(entity => entity.Property(m => m.Id).HasMaxLength(85));
