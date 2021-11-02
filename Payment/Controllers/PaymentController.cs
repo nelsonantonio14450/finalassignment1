@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace Payment.Controllers
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //ini buat authorize
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //ini buat authorize
     [Route("api/[controller]")]
     [ApiController]
     public class PaymentController : ControllerBase
