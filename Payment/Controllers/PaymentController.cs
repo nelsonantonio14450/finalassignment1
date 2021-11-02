@@ -154,7 +154,7 @@ namespace Payment.Controllers
             existItem.cardOwnerName = item.cardOwnerName;
             existItem.cardNumber = item.cardNumber;
             existItem.Amount = item.Amount;
-            existItem.paidAt = existItem.paidAt;
+            existItem.paidAt = item.paidAt;
             existItem.expirationDate = item.expirationDate;
             existItem.securityCode = item.securityCode;
 
